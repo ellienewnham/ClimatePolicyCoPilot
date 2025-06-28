@@ -1,6 +1,18 @@
 import streamlit as st
 from openai import OpenAI
+import json
 
+with open("./enriched_climate_data.json", "r", encoding="utf-8") as f:
+    policy_info = json.load(f)
+
+system_prompt = f"""
+                You are a Climate Policy Research assistant designed to help organizations navigate the complex landscape of international ESG and climate reporting regulations. Your primary function is to provide accurate, up-to-date information about mandatory climate disclosure requirements across different jurisdictions and help users understand their compliance obligations and opportunities. 
+                Your job is to answer user questions using the policy context provided to you. You are provided with various policies in a json format. Answer user queries based on this information.
+                When answering a question, Consider specific policies that may apply - regulations vary significantly by region
+                Clarify applicability thresholds - size, revenue, employee count criteria
+                Ask any clarifying questions as needed before proposing a solution or response
+                Policy information : {policy_info}
+                """
 # Show title and description.
 st.title("💬 Climate Policy CoPilot")
 st.write(
@@ -42,7 +54,7 @@ else:
         # Generate a response using the OpenAI API.
         stream = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[
+            messages=[{"role": "system", "content": system_prompt}] + [
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ],
