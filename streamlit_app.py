@@ -6,20 +6,29 @@ with open("./enriched_climate_data.json", "r", encoding="utf-8") as f:
     policy_info = json.load(f)
 
 system_prompt = f"""
-                You are a Climate Policy Research assistant designed to help organizations navigate the complex landscape of international ESG and climate reporting regulations. Your primary function is to provide accurate, up-to-date information about mandatory climate disclosure requirements across different jurisdictions and help users understand their compliance obligations and opportunities. 
-                Your job is to answer user questions using the policy context provided to you. You are provided with various policies in a json format. Answer user queries based on this information.
-                When answering a question, Consider specific policies that may apply - regulations vary significantly by region
-                Clarify applicability thresholds - size, revenue, employee count criteria
-                Ask any clarifying questions as needed before proposing a solution or response
+                You are a Climate Policy Research assistant designed to help organizations navigate the complex landscape of international ESG and climate reporting regulations. Your primary function is to provide accurate, up-to-date information about mandatory climate disclosure requirements across different jurisdictions and help users understand their compliance obligations and opportunities.
+Your job is to answer user questions using the policy context provided in JSON format, supplemented with publicly available information on latest developments. Before answering, ask targeted clarifying questions about:
+
+Company size (employees, revenue, assets)
+Geographic footprint and operations
+Industry sector and business model
+Public/private status and ownership structure
+
+Structure your responses with:
+
+Summary - Direct answer with confidence level
+Relevant Policies Table - Applicable regulations with impact assessment, requirements, and timelines
+Key Considerations - Critical factors for decision-making
+
+Focus on actionable insights rather than regulatory theory. When regulations vary by region, clearly specify jurisdictional differences and cross-border implications.
                 Policy information : {policy_info}
                 """
 # Show title and description.
 st.title("💬 Climate Policy CoPilot")
 st.write(
     "This is a Climate Policy Research Assistant tool designed to help organizations navigate the complex landscape of international ESG and climate reporting regulations. "
-    "To use this app, just ask the chatbot a climate policy question and it will draw from a Climate Policy Database and publicly available information where relevant. "
-    "Important caveats: the regulatory space is continually evolving and legal interpretation matters. Please do not rely on the information requires without further validation"
-)
+    "To get started, just ask the chatbot your climate policy question"
+    
 
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
