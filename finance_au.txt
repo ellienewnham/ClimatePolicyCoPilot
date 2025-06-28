@@ -1,0 +1,67 @@
+Commonwealth Climate Disclosure Policy | Department of Finance
+Commonwealth Climate Disclosure is the Government’s policy for Commonwealth entities and Commonwealth companies to publicly report on their exposure to climate risks and opportunities, as well as their actions to manage them, delivering transparent and consistent climate disclosures to the Australian public.
+Non-corporate Commonwealth entities are required to complete climate disclosures. Corporate Commonwealth entities, and Commonwealth companies that are not required to prepare a sustainability report under section 292A of the Corporations Act 2001, are encouraged to complete climate disclosures. It is intended that the policy is mandated through amendments to section 516A of the Environment Protection and Biodiversity Conservation Act 1999 in the future. Commonwealth companies that are required to prepare a sustainability report under section 292A of the Corporations Act 2001, are subject to that initiative (refer to Stream 1).
+See the PGPA Flipchart for a reference of all non-corporate and corporate Commonwealth entities and companies. Commonwealth entities and companies are government bodies that are subject to the Public Governance, Performance and Accountability Act 2013 .
+This initiative aligns with a number of Government priorities including the Sustainable Finance Roadmap and the Australian Government’s Approach to Climate Risk and Opportunity Management in the Public Sector . It is complementary to the Net Zero in Government Operations Strategy.
+Commonwealth Climate Disclosure Streams#
+Commonwealth entities and companies have been divided into two streams, as outlined in the diagram below.
+Stream 1#
+There are currently at least five Commonwealth companies that are required to prepare a sustainability report under Section 292A of the Corporations Act 2001. These Commonwealth companies are categorised as Stream 1 under the Commonwealth Climate Disclosure policy architecture.
+Stream 1 Commonwealth companies will report against the Australian Sustainability Reporting Standard AASB S2 Climate-related Disclosures (AASB S2) in accordance with Section 292A of the Corporations Act. AASB S2 is based on the International Sustainability Standards Board's (ISSB) four pillars of governance, strategy, risk management, and metrics and targets, with specific tailoring for Australia's large businesses and financial institutions.
+RMG 137 Annual Reports for Commonwealth Companies will be updated to reflect that Stream 1 Commonwealth companies will follow AASB S2 for climate disclosures.
+A community of practice has been established to support affected Commonwealth companies.
+Stream 2#
+Stream 2 comprises all non-corporate Commonwealth entities (NCEs), corporate Commonwealth entities (CCEs), and Commonwealth companies that are not required to prepare a sustainability report under Section 292A of the Corporations Act 2001.
+Phased implementation#
+Commencement of climate disclosure by Commonwealth entities and Commonwealth companies in Stream 2 is being phased in over a period of 5 years. Commonwealth entities and Commonwealth companies are divided into 4 tranches according to entity type, size and profile (Tranches 0, 1, 2, and 3) as part of the phased implementation (refer to the accordion below for tranche categorisation, and information on the tranche 3 carve-out).
+Entities may and are encouraged to voluntarily report on their exposure to and management of climate risks and opportunities before their allocated date.
+Climate disclosures by Tranche 0 entities commenced with a Commonwealth Climate Disclosure Pilot by all Departments of State and entities that voluntarily opted-in. These entities prepared disclosures against the Pilot Guidance in their FY2023-24 annual reports.
+Entities:
+All Departments of State
+Entities that voluntarily opted-in.
+First disclosure for FY2024-25 and then onwards
+Entities:
+All Departments of State
+All Commonwealth entities and Commonwealth companies that are a 'controlling corporation' under the National Greenhouse and Energy Reporting Act 2007.
+All Specialist Investment Vehicles and the Future Fund Management Agency. 
+Commonwealth entities and Commonwealth companies that fulfill two out of the four thresholds below:
+Referenced in Part 1 of the Climate Change (Consequential Amendments) Act 2022;
+Has over 500 employees;
+The value of total assets at the end of the financial year of the entity/company and any entities it controls is $1 billion or more;
+The annual expense for the financial year is $500 million or more.
+All Commonwealth entities with responsibility for climate change or climate risk disclosure policy design or implementation, not otherwise covered by the previous criteria.
+First disclosure for FY2025-26 and then onwards
+Entities:
+Commonwealth entities and Commonwealth companies that fulfill two out of the four thresholds below:
+Referenced in Part 1 of the Climate Change (Consequential Amendments) Act 2022;
+Has over 250 employees;
+The value of total assets at the end of the financial year of the entity/company and any entities it controls is $500 million or more;
+The annual expense for the financial year is $200 million or more.
+First disclosure for FY2026-27 and then onwards
+Entities:
+All remaining Commonwealth entities and Commonwealth companies, including Commonwealth companies not required to prepare a sustainability report under Section 292A of the Corporations Act 2001.
+Carve-out:
+Commonwealth entities and Commonwealth companies that meet the following criteria are only required to meet emissions reporting obligations under the Net Zero in Government Operations Strategy, and if applicable, obligations under the APS Net Zero by 2030 target.
+Classified as Tranche 3
+Have less than 20 employees
+Have been assessed to not have material exposure to climate risks and opportunities.
+Commonwealth Climate Disclosure Requirements#
+Tranches 1 and 2
+Tranche 1 and 2 Commonwealth entities and Commonwealth companies report against the Commonwealth Climate Disclosure Requirements being developed by the Department of Finance. The Commonwealth Climate Disclosure Requirements will align with the Australian Sustainability Reporting Standard AASB S2 Climate-related Disclosure Standard with specific tailoring to account for the legislative, regulatory and policy environment of Commonwealth entities and Commonwealth companies.
+For example, the APS Net Zero by 2030 target and associated emissions accounting.
+These Requirements will be progressively sequenced-in over three years to allow for capability uplift and climate risk maturity development by Commonwealth entities and Commonwealth companies.
+The Commonwealth Climate Disclosure Requirements for Year 1 reporting and indicative criteria for the second and third reporting years is available at Commonwealth Climate Disclosure Requirements . Indicative Requirements will allow for updates to align the Requirements with the upcoming International Public Sector Accounting Standards Board Sustainability Reporting Standards , if needed.
+Tranche 3
+Tranche 3 Commonwealth entities and companies will be subject to simplified or ‘reduced’ Commonwealth Climate Disclosure Requirements. These Requirements will be based on a subset of the full Commonwealth Climate Disclosure Requirements, commensurate with the risk management, reporting capacity of smaller Commonwealth entities.
+Simplified Requirements will be progressively phased-in over a two-year period from FY2026-27.
+Simplified Commonwealth Climate Disclosure Requirements for Tranche 3 entities are expected to be released in Q3 2025.
+Resource Management Guides (RMGs) for annual reporting by entity type (RMGs 135, 136 and 137) will be updated to communicate the Commonwealth Climate Disclosure Requirements.
+Verification and assurance
+The Department of Finance is designing a verification and assurance regime for Stream 2 in consultation with the Australian National Audit Office (ANAO) and affected entities. The focus of the regime will be on improving the quality of climate disclosures. The Department of Finance will be responsible for annual monitoring of entities’ compliance.
+Building APS capability
+Capability building support is being provided to Commonwealth entities and Commonwealth companies to help them meet their climate disclosure obligations.
+Practical Application Guidance documents tailored by entity type will be published in Q1 2025. These will support and guide entities in applying the Commonwealth Climate Disclosure Requirements and Simplified Commonwealth Climate Disclosure Requirements.
+Other tools and guidance, a community of practice, and training opportunities are available for Commonwealth entities and Commonwealth companies to assist in the development of best-practice climate disclosures.
+The Climate Action in Government Operations Unit is continuing to provide support to entities to account for their greenhouse gas emissions and, for relevant entities, to meet their obligations under the APS Net Zero by 2030 target.
+The Department of Climate Change, Energy, the Environment and Water (DCCEEW), through its Climate Risk and Opportunity Management Program , is providing guidance and support to enable Commonwealth entities and Commonwealth companies to identify, assess, prioritise and manage their climate risks and opportunities.
+
