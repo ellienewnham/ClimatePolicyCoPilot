@@ -54,3 +54,16 @@ else:
         with st.chat_message("assistant"):
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
+
+import streamlit as st
+from pathlib import Path
+
+# Add to your sidebar or main navigation
+st.sidebar.markdown("---")
+if st.sidebar.button("📋 Methodology"):
+   # Read and display the methodology HTML
+   methodology_path = Path("methodology.html")
+   if methodology_path.exists():
+       with open(methodology_path, "r", encoding="utf-8") as f:
+           methodology_html = f.read()
+       st.components.v1.html(methodology_html, height=1200, scrolling=True)
