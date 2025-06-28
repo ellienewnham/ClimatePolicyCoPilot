@@ -28,7 +28,7 @@ Focus on actionable insights rather than regulatory theory. When regulations var
 st.title("💬 Climate Policy CoPilot")
 st.write(
     "This is a Climate Policy Research Assistant tool designed to help organizations navigate the complex landscape of international ESG and climate reporting regulations. "
-    "To get started, just ask the chatbot your climate policy question"
+    "To get started, just ask the chatbot your climate policy question")
     
 
 # Ask user for their OpenAI API key via `st.text_input`.
