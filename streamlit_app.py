@@ -2,11 +2,11 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("💬 Chatbot")
+st.title("💬 Climate Policy CoPilot")
 st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
-    "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
+    "This is a Climate Policy Research Assistant tool designed to help organizations navigate the complex landscape of international ESG and climate reporting regulations. "
+    "To use this app, just ask the chatbot a climate policy question and it will draw from a Climate Policy Database and publicly available information where relevant. "
+    "Important caveats: the regulatory space is continually evolving and legal interpretation matters. Please do not rely on the information requires without further validation"
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
