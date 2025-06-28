@@ -2,7 +2,7 @@ import http.client
 import json
 
 
-def get_data(input_url, output_file):
+def get_data(input_url):
     conn = http.client.HTTPSConnection("api.apify.com")
     payload = json.dumps({
         "aggressivePrune": False,
@@ -47,9 +47,10 @@ def get_data(input_url, output_file):
     data = res.read()
     items = json.loads(data.decode("utf-8"))
     texts = [item.get("text", "") for item in items if "text" in item]
-    with open(output_file, "w", encoding="utf-8") as f:
-        for text in texts:
-            f.write(text.strip() + "\n\n")
+    result_response = ""
+    for text in texts:
+        result_response += (text.strip() + "\n\n")
+    return result_response
 
-get_data("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2088", "./eur_lex.txt")
-get_data("https://www.finance.gov.au/government/climate-action-government-operations/commonwealth-climate-disclosure-policy", "./finance_au.txt")
+#get_data("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2088", "./raw_data/eur_lex.txt")
+#get_data("https://www.finance.gov.au/government/climate-action-government-operations/commonwealth-climate-disclosure-policy", "./raw_data/finance_au.txt")
