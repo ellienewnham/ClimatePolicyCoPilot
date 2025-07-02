@@ -3,6 +3,10 @@ from openai import OpenAI
 import json
 import os
 
+# Limit number of messages stored in the chat history to avoid hitting the
+# context length limit when sending prompts to the OpenAI API.
+MAX_MESSAGES = 15
+
 with open("./enriched_climate_data.json", "r", encoding="utf-8") as f:
     policy_info = json.load(f)
 
@@ -58,6 +62,9 @@ else:
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": prompt})
+        # Keep only the most recent MAX_MESSAGES to avoid exceeding context
+        # limits when sending the conversation to the model.
+        st.session_state.messages = st.session_state.messages[-MAX_MESSAGES:]
         with st.chat_message("user"):
             st.markdown(prompt)
 
@@ -76,8 +83,9 @@ else:
         with st.chat_message("assistant"):
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
+        # Trim again after adding the assistant response
+        st.session_state.messages = st.session_state.messages[-MAX_MESSAGES:]
 
-import streamlit as st
 from pathlib import Path
 
 # Add to your sidebar or main navigation
