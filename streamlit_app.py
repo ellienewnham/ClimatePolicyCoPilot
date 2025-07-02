@@ -2,10 +2,52 @@ import streamlit as st
 from openai import OpenAI
 import json
 import os
+import tiktoken
 
 # Limit number of messages stored in the chat history to avoid hitting the
 # context length limit when sending prompts to the OpenAI API.
 MAX_MESSAGES = 15
+# Limit on the number of tokens that will be sent to the model.
+# Slightly below the actual 16_385 token limit for gpt-3.5-turbo.
+MAX_MODEL_TOKENS = 16000
+
+
+def count_tokens(messages, model="gpt-3.5-turbo"):
+    """Return the number of tokens used by a list of messages."""
+    try:
+        encoding = tiktoken.encoding_for_model(model)
+    except KeyError:
+        encoding = tiktoken.get_encoding("cl100k_base")
+
+    if model.startswith("gpt-3.5"):
+        tokens_per_message = 4
+        tokens_per_name = -1
+    elif model.startswith("gpt-4"):
+        tokens_per_message = 3
+        tokens_per_name = 1
+    else:
+        tokens_per_message = 3
+        tokens_per_name = 1
+
+    num_tokens = 0
+    for message in messages:
+        num_tokens += tokens_per_message
+        for key, value in message.items():
+            num_tokens += len(encoding.encode(value))
+            if key == "name":
+                num_tokens += tokens_per_name
+    num_tokens += 3  # every reply is primed with <im_start>assistant
+    return num_tokens
+
+
+def build_message_list(system_prompt, history):
+    """Trim history so total tokens stay below MAX_MODEL_TOKENS."""
+    messages = [{"role": "system", "content": system_prompt}] + history
+    discarded = 0
+    while count_tokens(messages) > MAX_MODEL_TOKENS and len(messages) > 1:
+        messages.pop(1)
+        discarded += 1
+    return messages, discarded
 
 with open("./enriched_climate_data.json", "r", encoding="utf-8") as f:
     policy_info = json.load(f)
@@ -68,13 +110,19 @@ else:
         with st.chat_message("user"):
             st.markdown(prompt)
 
+        # Build the message list ensuring we stay under the token limit.
+        msgs_to_send, dropped = build_message_list(
+            system_prompt, st.session_state.messages
+        )
+        if dropped:
+            st.warning(
+                f"Dropped {dropped} earlier messages to stay within the token limit."
+            )
+
         # Generate a response using the OpenAI API.
         stream = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "system", "content": system_prompt}] + [
-                {"role": m["role"], "content": m["content"]}
-                for m in st.session_state.messages
-            ],
+            messages=msgs_to_send,
             stream=True,
         )
 
